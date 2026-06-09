@@ -1,0 +1,9 @@
+fastapi==0.109.0
+uvicorn[standard]
+python-dotenv==1.0.0
+openai-agents==0.8.3
+pydantic>=2.12.3
+# The following are indirect dependencies used by openai-agents
+# They are included for completeness but will be resolved automatically
+# requests==2.32.5
+# python-multipart>=0.0.9
