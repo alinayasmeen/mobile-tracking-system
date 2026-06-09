@@ -1,0 +1,16 @@
+# netlify.toml – Netlify build configuration for this monorepo
+[build]
+  # Project root (repo root)
+  base    = "."
+  # Install frontend dependencies, then build the Next.js app
+  command = "npm ci --prefix frontend && npm run build --prefix frontend"
+  # Directory that contains the built static files
+  publish = "frontend/.next"
+
+[build.environment]
+  # Use the same Node version you develop with (adjust if needed)
+  NODE_VERSION = "20"
+
+# If you later add Netlify Functions, uncomment and set the directory
+# [functions]
+#   directory = "netlify/functions"
