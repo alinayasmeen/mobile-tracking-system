@@ -46,7 +46,7 @@ import os
 # Add the parent directory to the path to import from agents
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from agents.agent_models import EventType, AgentInput, AgentResponse, MatchResult
+from ai_agents.agent_models import EventType, AgentInput, AgentResponse, MatchResult
 from typing import List
 
 

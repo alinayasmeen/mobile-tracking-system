@@ -12,7 +12,7 @@ import os
 # Add the parent directory to the path to import from agents
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from agents.agent_models import AgentInput, EventType, AgentResponse, MatchResult  # Import from the models file
+from ai_agents.agent_models import AgentInput, EventType, AgentResponse, MatchResult  # Import from the models file
 
 
 class OpenAIIMEIAgentClient:

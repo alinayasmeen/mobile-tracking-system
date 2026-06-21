@@ -18,7 +18,7 @@ from auth import (
     ACCESS_TOKEN_EXPIRE_MINUTES
 )
 from imei_matching_agent import IMEIMatchingAgent
-from agents.agent_models import AgentInput, EventType
+from ai_agents.agent_models import AgentInput, EventType
 from interface_adapters.Repositories import UserRepository, PhoneRepository, ReportRepository, TransferRequestRepository, RetailerPurchaseRepository
 from interface_adapters.Controllers import UserController, PhoneController, ReportController, AdminController, TransferController, RetailerController
 from application.UseCases import UserRegistrationUseCase, PhoneRegistrationUseCase, ReportCreationUseCase, IMEIMatchingUseCase, TransferRequestUseCase, RetailerPurchaseUseCase
