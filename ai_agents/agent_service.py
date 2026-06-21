@@ -5,12 +5,6 @@ This service runs separately from the main application and handles
 automated IMEI matching and report state evaluation using OpenAI agents.
 """
 
-import sys, os
-# Ensure the repository root (the directory that contains the "agents" package) is on the import path.
-PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-if PROJECT_ROOT not in sys.path:
-    sys.path.insert(0, PROJECT_ROOT)
-
 from fastapi import FastAPI, HTTPException
 from typing import List
 import asyncio
@@ -22,8 +16,8 @@ import uvicorn
 load_dotenv()
 
 # Import the agent service
-from openai_imei_agent_service import OpenAIIMEIMatchingAgentService
-from agent_models import AgentInput, AgentResponse
+from .openai_imei_agent_service import OpenAIIMEIMatchingAgentService
+from .agent_models import AgentInput, AgentResponse
 
 
 app = FastAPI(title="OpenAI IMEI Matching Agent Service", version="1.0.0")
