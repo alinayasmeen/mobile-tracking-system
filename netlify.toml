@@ -4,13 +4,12 @@
   base    = "."
   # Install frontend dependencies, then build the Next.js app
   command = "npm ci --prefix frontend && npm run build --prefix frontend"
-  # Directory that contains the built static files
+  # The Next.js Runtime plugin reads the build output from .next itself
   publish = "frontend/.next"
 
 [build.environment]
   # Use the same Node version you develop with (adjust if needed)
   NODE_VERSION = "20"
 
-# If you later add Netlify Functions, uncomment and set the directory
-# [functions]
-#   directory = "netlify/functions"
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
